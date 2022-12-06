@@ -37,7 +37,6 @@ return (
     <Trash size={20} onClick={trashItemHandler} />
     </div>
 </div>
-);
-};
-
-export default CheckoutItem;
+)
+}
+export default CheckoutItem
