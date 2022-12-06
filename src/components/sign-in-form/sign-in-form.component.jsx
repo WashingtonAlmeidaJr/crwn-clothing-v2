@@ -67,7 +67,6 @@ const SignInForm = () => {
           name='email'
           value={email}
         />
-
         <FormInput
           label='Password'
           type='password'
