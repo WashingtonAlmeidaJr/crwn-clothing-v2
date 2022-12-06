@@ -12,7 +12,7 @@ import CartDropdown from "../../cart-dropdown/cart-dropdown.component";
 const Navigation = () => {
 
   const { isCartOpen,setIsCartOpen } = useContext(CartContext);
-   console.log(UserContext)
+  //  console.log(UserContext)
 
   const toggleIsCartOpen=()=>setIsCartOpen(!isCartOpen)
 
@@ -25,7 +25,7 @@ const Navigation = () => {
 
   return (
     <>
-      <div className="navigation" onClick={toggleIsCartOpen}>
+      <div className="navigation" >
         <Link className="logo-container" to="/">
           <CrwnLogo className="logo" />
         </Link>
@@ -38,7 +38,7 @@ const Navigation = () => {
               Sign In
             </Link>
           )}
-          <CartIcon/>
+          <CartIcon onClick={toggleIsCartOpen}/>
         </div>
         {isCartOpen && <CartDropdown/>}
       </div>
