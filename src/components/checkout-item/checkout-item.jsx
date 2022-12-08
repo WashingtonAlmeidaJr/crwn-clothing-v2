@@ -1,7 +1,7 @@
 import { MinusCircle, PlusCircle, Trash } from "phosphor-react";
 import { useContext } from "react";
 import { CartContext } from "../../context/cart.context";
-import "./checkout-item.styles.scss";
+import { CheckoutContainer } from "./checkout-item.styles";
 
 const CheckoutItem = ({ cartItem }) => {
 const { removeItemToCheckout, removeItemToCart, addItemToCart } =
@@ -20,7 +20,7 @@ const minusItemHandler=()=>{
 const { name, imageUrl, price, quantity } = cartItem;
 
 return (
-<div className="checkout-item-container">
+<CheckoutContainer>
     <div className="image-container">
     <img src={imageUrl} alt="" />
     </div>
@@ -36,7 +36,7 @@ return (
     <div className="remove-button">
     <Trash size={20} onClick={trashItemHandler} />
     </div>
-</div>
+</CheckoutContainer>
 )
 }
 export default CheckoutItem

@@ -1,4 +1,7 @@
-.cart-dropdown-container {
+import styled from "styled-components";
+
+export const DropdownContainer = styled.div`
+
   position: absolute;
   width: 240px;
   height: 340px;
@@ -24,6 +27,7 @@
   }
 
   button {
+    font-size: 12px;
     margin-top: auto;
   }
-}
+`

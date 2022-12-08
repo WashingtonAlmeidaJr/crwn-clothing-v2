@@ -1,3 +1,5 @@
+import styled from 'styled-components';
+export const CategoryContainer = styled.div`
 .category-container{
     display:grid;
     grid-template-columns: repeat(4,1fr);
@@ -9,3 +11,4 @@
         margin-top:25px;    
     }
 }
+`;

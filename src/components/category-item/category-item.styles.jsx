@@ -1,3 +1,6 @@
+import styled from 'styled-components';
+
+export const CategoryItemContainer = styled.div`
 .categories-container {
   width: 100%;
   display: flex;
@@ -73,3 +76,5 @@
     }
   }
 }
+
+`;

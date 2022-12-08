@@ -1,3 +1,5 @@
+import styled from "styled-components";
+export const AuthenticationContainer = styled.div`
 .forms-container {
   display: flex;
   justify-content: space-between;
@@ -5,9 +7,4 @@
   margin: 30px auto;
 }
 
-* {
-  @media (max-width: 700px) {
-    display: flexbox;
-    flex-wrap: wrap;
-  }
-}
+`;

@@ -3,10 +3,10 @@ import { Outlet, Link } from "react-router-dom";
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 import { UserContext } from "../../context/user.context";
 import { CartContext } from "../../context/cart.context";
-import "./navigation.styles.scss";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+import { NavigationContainer } from "./navigation.styles";
 
 
 const Navigation = () => {
@@ -25,11 +25,11 @@ const Navigation = () => {
 
   return (
     <>
-      <div className="navigation" >
+      <NavigationContainer >
         <Link className="logo-container" to="/">
           <CrwnLogo className="logo" />
         </Link>
-        <div className="links-container">
+        <div className="nav-links-container">
           <Link to="/shop">Shop</Link>
           {UserContext.value ? (
             <span className="nav-link" onClick={signOutHandler}>Sign out</span>
@@ -41,7 +41,7 @@ const Navigation = () => {
           <CartIcon onClick={toggleIsCartOpen}/>
         </div>
         {isCartOpen && <CartDropdown/>}
-      </div>
+      </NavigationContainer>
       <Outlet />
     </>
   );
