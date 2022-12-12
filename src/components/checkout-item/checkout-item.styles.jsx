@@ -24,7 +24,7 @@ export const CheckoutContainer = styled.div`
   }
 
   .price{
-     margin-left: 10%;
+     margin-left: 130px;
   }
 
   .quantity {
