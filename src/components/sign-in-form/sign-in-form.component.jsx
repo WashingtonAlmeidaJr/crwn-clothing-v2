@@ -1,16 +1,15 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 
 import FormInput from '../form-input/form-input.component';
-import Button from '../button/button.component';
+import Button,{BUTTON_TYPE_CLASSES} from '../button/button.component';
 
 import {
   signInWithGooglePopup,
   signInAuthUserWithEmailAndPassword,
-  createUserDocumentFromAuth,
 } from '../../utils/firebase/firebase.utils';
 
-import { UserContext } from '../../context/user.context';
 import { SignInFormContainer } from './sign-in-form.styles';
+import { GoogleChromeLogo, GoogleLogo, GooglePlayLogo } from 'phosphor-react';
 
 const defaultFormFields = {
   email: '',
@@ -77,8 +76,8 @@ const SignInForm = () => {
         />
         <div className='buttons-container'>
           <Button type='submit'>Sign In</Button>
-          <Button type='button' buttonType='google' onClick={signInWithGoogle}>
-            Google sign in
+          <Button type='button' buttonType={BUTTON_TYPE_CLASSES.google} onClick={signInWithGoogle}>
+            <GooglePlayLogo size={32}/> <span>Google sign in</span>
           </Button>
         </div>
       </form>

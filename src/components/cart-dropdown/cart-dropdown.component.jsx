@@ -11,9 +11,13 @@ const {cartItems}=useContext(CartContext)
     return(
     <DropdownContainer className='cart-dropdown-container'>
         <div className='cart-items'>
-            {cartItems.map((item)=>{
-               return(<CartItem key={item.id} cartItem={item}/>) 
-            })}
+            {cartItems.length?
+                cartItems.map((item)=>{
+                return(<CartItem key={item.id} cartItem={item}/>) 
+                }):(
+                    <span className='empty-message'>No itens on cart</span>
+                )
+            }
         </div>
         <Link className="nav-link" to="/checkout">
             <Button>GO TO CHECK OUT</Button>

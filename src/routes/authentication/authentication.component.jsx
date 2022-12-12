@@ -20,7 +20,7 @@ const Authentication = () => {
         <SignUpForm />
       </div>
     </AuthenticationContainer>
-  );
+      );
 };
 
 export default Authentication;

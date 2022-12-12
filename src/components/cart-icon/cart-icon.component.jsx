@@ -10,8 +10,8 @@ const CartIcon = () => {
   const {cartCount}=useContext(CartContext)
 
   return (
-    <CartIconContainer>
-      <ShoppingIcon className='shopping-icon' onClick={toggleCartOpen}/>
+    <CartIconContainer onClick={toggleCartOpen}>
+      <ShoppingIcon className='shopping-icon'/>
       <span className='item-count'>{cartCount}</span>
     </CartIconContainer>
   );
